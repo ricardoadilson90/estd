@@ -33,5 +33,30 @@ public class Array {
 		}
 		return sum; 
 	}
+	public int bigDiff(int nums[]){
+	 	int maior = 0;
+			int menor = 0;
+			
+			for (int i = 0; i < nums.length; i++) {
+					if (menor> nums[i]&&i!=0){
+						menor = nums[i];
+					}else if (i == 0){
+						menor = nums[i];
+					}
+					
+				}
+			
+			for (int i = 0; i < nums.length; i++) {
+					if (maior< nums[i]&&i!=0){
+						maior = nums[i];
+					}else if (i == 0){
+						maior = nums[i];
+					}
+				
+				
+			}
+			
+			return maior - menor;
+	}
 
 }
