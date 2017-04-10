@@ -1,5 +1,8 @@
 package estd;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class Array {
 
 	public boolean firstLast6(int[] nums) {
@@ -57,6 +60,25 @@ public class Array {
 			}
 			
 			return maior - menor;
+	}
+	
+	public void sort(String [] linhas){
+		for (int i = 0; i < linhas.length; i++) {
+			String aux = linhas[i];
+			int j = i -1;
+			while ((j>=0)&&(linhas[j].compareTo(aux)>0)){
+				linhas[j+1] = linhas[j--];
+			}
+			linhas [j+1] = aux;
+		}
+	}
+	@Test
+	public void sortTest(){
+		Array a = new Array();
+		String [] linhas = {"joao","pedro","luan", "jose"};
+		a.sort(linhas);
+		String [] esperado = {"joao", "jose","luan", "pedro"};
+		Assert.assertArrayEquals(esperado, linhas);
 	}
 
 }
