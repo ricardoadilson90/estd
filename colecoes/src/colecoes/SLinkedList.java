@@ -31,20 +31,17 @@ public class SLinkedList<T> {
 	}
 
 	public void add(Node<T> node) {
-		
 		if (isEmpty()) {
-			size++;
 			first = node;
 			last = node;
 		} else {
-			size++;
 			last.setNext(node);
 			last = node;
 		}
-
+		size++;
 	}
-	
-	public boolean isEmpty(){
+
+	public boolean isEmpty() {
 		return size == 0;
 	}
 
