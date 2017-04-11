@@ -10,24 +10,12 @@ public class SLinkedList<T> {
 		return first;
 	}
 
-	public void setFirst(Node<T> first) {
-		this.first = first;
-	}
-
 	public Node<T> getLast() {
 		return last;
 	}
 
-	public void setLast(Node<T> last) {
-		this.last = last;
-	}
-
 	public long getSize() {
 		return size;
-	}
-
-	public void setSize(long size) {
-		this.size = size;
 	}
 
 	public void add(Node<T> node) {
@@ -40,6 +28,21 @@ public class SLinkedList<T> {
 		}
 		size++;
 	}
+
+	public void removeFirst() {
+		if (!isEmpty()) {
+
+			first = first.getNext();
+			size--;
+			if (isEmpty()){
+				last = null;
+			}
+		}
+		
+		
+	}
+
+
 
 	public boolean isEmpty() {
 		return size == 0;
