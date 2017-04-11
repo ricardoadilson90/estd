@@ -4,7 +4,7 @@ public class SLinkedList<T> {
 
 	private Node<T> first;
 	private Node<T> last;
-	private long size = 0;
+	private long size;
 
 	public Node<T> getFirst() {
 		return first;
@@ -31,7 +31,8 @@ public class SLinkedList<T> {
 	}
 
 	public void add(Node<T> node) {
-		if (first == null) {
+		
+		if (isEmpty()) {
 			size++;
 			first = node;
 			last = node;
@@ -41,6 +42,10 @@ public class SLinkedList<T> {
 			last = node;
 		}
 
+	}
+	
+	public boolean isEmpty(){
+		return size == 0;
 	}
 
 }
