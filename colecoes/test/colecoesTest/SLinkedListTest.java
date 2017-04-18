@@ -35,4 +35,32 @@ public class SLinkedListTest {
 		linkedList.add(node3);
 		Assert.assertTrue(linkedList.getSize() == 3);
 	}
+	@Test
+	public void printTest(){
+		SLinkedList<String> linkedList = new SLinkedList<String>();
+		Assert.assertTrue(linkedList.getSize() == 0);
+		
+		Node<String> node = new Node<>();
+		node.setValue("A");
+		Node<String> node1 = new Node<>();
+		node1.setValue("B");
+		Node<String> node2 = new Node<>();
+		node2.setValue("C");
+		Node<String> node3 = new Node<>();
+		node3.setValue("D");
+		
+		linkedList.add(node);
+		linkedList.add(node1);
+		linkedList.add(node2);
+		linkedList.add(node3);
+		
+		Node<String> aux = linkedList.getFirst();
+		while(aux!=null){
+			System.out.println("primeiro elemento:" + aux.getValue());
+			aux = aux.getNext();
+		}
+		
+		
+		
+	}
 }
