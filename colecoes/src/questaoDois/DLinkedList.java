@@ -206,10 +206,8 @@ public class DLinkedList<T> {
 		DNode<T> aux = this.getFirst();
 		while (aux != null) {
 			if(aux.getValue().equals(value)) {
-				DNode<T> aux1 = aux.getPrevious();
-				DNode<T> aux2 = aux.getNext();
-				aux1.setNext(aux2);
-				aux2.setPrevious(aux1);
+				aux.getPrevious.setNext(aux.getNext());
+				aux.getNext.setPrevious(aux.getPrevious());
 				aux.setNext(null);
 				aux.setPrevious(null);
 			}
