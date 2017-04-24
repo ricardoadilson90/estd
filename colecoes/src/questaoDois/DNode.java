@@ -6,6 +6,10 @@ public class DNode <T> {
 	private DNode<T> previous;
 	private T value;
 	
+	public DNode(T t) {
+		value = t;
+	}
+	
 	public DNode<T> getNext() {
 		return next;
 	}
