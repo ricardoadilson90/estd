@@ -76,7 +76,7 @@ public class DLinkedList<T> {
 		long counter = 1;
 		while(!aux.equals(node)){
 			counter++;
-			aux.getNext();
+			aux = aux.getNext();
 		}
 		return  getSize()-counter;
 	}
@@ -87,7 +87,7 @@ public class DLinkedList<T> {
 		long counter = 1;
 		while(!aux.equals(node)){
 			counter++;
-			aux.getNext();
+			aux = aux.getNext();
 		}
 		return  getSize()-counter;
 	}
@@ -102,7 +102,7 @@ public class DLinkedList<T> {
 		long counter = 1;
 		while(!aux.equals(node)){
 			counter++;
-			aux.getNext();
+			aux = aux.getNext();
 		}
 		return  counter;
 	}
