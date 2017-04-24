@@ -164,10 +164,10 @@ public class DLinkedListTest{
 		linkedList.addLast(node3);
 		
 		DLinkedList<String> aux = new DLinkedList<String>();
-		DNode<String> node = new DNode<>("E");
-		DNode<String> node1 = new DNode<>("F");
-		DNode<String> node2 = new DNode<>("G");
-		DNode<String> node3 = new DNode<>("H");
+		node = new DNode<>("E");
+		node1 = new DNode<>("F");
+		node2 = new DNode<>("G");
+		node3 = new DNode<>("H");
 		aux.addFirst(node);
 		aux.addLast(node1);
 		aux.addLast(node2);
@@ -176,18 +176,18 @@ public class DLinkedListTest{
 		DLinkedList<String> aux2 = linkedList.join(linkedList,aux);
 		
 		DLinkedList<String> aux3 = new LinkedList<String>();
-		DNode<String> node = new DNode<>("A");
-		DNode<String> node1 = new DNode<>("B");
-		DNode<String> node2 = new DNode<>("C");
-		DNode<String> node3 = new DNode<>("D");
+		node = new DNode<>("A");
+		node1 = new DNode<>("B");
+		node2 = new DNode<>("C");
+		node3 = new DNode<>("D");
 		aux3.addFirst(node);
 		aux3.addLast(node1);
 		aux3.addLast(node2);
 		aux3.addLast(node3);
-		DNode<String> node = new DNode<>("E");
-		DNode<String> node1 = new DNode<>("F");
-		DNode<String> node2 = new DNode<>("G");
-		DNode<String> node3 = new DNode<>("H");
+		node = new DNode<>("E");
+		node1 = new DNode<>("F");
+		node2 = new DNode<>("G");
+		node3 = new DNode<>("H");
 		aux3.addLast(node);
 		aux3.addLast(node1);
 		aux3.addLast(node2);
@@ -213,9 +213,9 @@ public class DLinkedListTest{
 		linkedList.remove("C");
 		
 		DLinkedList<String> aux = new DLinkedList<String>();
-		DNode<String> node = new DNode<>("A");
-		DNode<String> node1 = new DNode<>("B");
-		DNode<String> node3 = new DNode<>("D");
+		node = new DNode<>("A");
+		node1 = new DNode<>("B");
+		node3 = new DNode<>("D");
 		aux.addFirst(node);
 		aux.addLast(node1);
 		aux.addLast(node3);
