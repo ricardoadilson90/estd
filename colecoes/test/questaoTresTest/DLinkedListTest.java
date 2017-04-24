@@ -1,10 +1,10 @@
-package questaoDoisTest;
+package questaoTresTest;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import questaoDois.DLinkedList;
-import questaoDois.DNode;
+import questaoTres.DLinkedList;
+import questaoTres.DNode;
 
 public class DLinkedListTest {
 
@@ -26,12 +26,10 @@ public class DLinkedListTest {
 		linkedList.addLast(node2);
 		linkedList.addLast(node3);
 
-		long teste = linkedList.getNodeHeight("C");
-		
-		Assert.assertTrue(teste == 1);
-		teste = linkedList.getNodeHeight(node);
+		long teste;
+		teste = linkedList.getNodeDepth(node2);
 		System.out.println(teste);
-		Assert.assertTrue(teste == 3);
+		Assert.assertTrue(teste == 2);
 
 		
 		

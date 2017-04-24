@@ -1,4 +1,4 @@
-package questaoDois;
+package questaoTres;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -90,6 +90,25 @@ public class DLinkedList<T> {
 			aux = aux.getNext();
 		}
 		return  getSize()-counter;
+	}
+	public long getNodeDepth(DNode <T> node){
+		DNode<T> aux = getFirst();
+		long counter = 0;
+		while(!aux.equals(node)){
+			counter++;
+			aux = aux.getNext();
+		}
+		return  counter;
+	}
+	public long getNodeDepth(T value){
+		DNode<T> node = search(value);
+		DNode<T> aux = getFirst();
+		long counter = 0;
+		while(!aux.equals(node)){
+			counter++;
+			aux = aux.getNext();
+		}
+		return  counter;
 	}
 		
 	public boolean isEmpty() {
