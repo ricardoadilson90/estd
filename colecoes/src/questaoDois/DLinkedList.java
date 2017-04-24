@@ -163,12 +163,14 @@ public class DLinkedList<T> {
 		while(aux1!=null){
 			DNode<T> node = new Dnode<T>();
 			node.setValue(aux1.getValue());
+			node.setPrevious(joined.getLast());
 			joined.addLast(node);
 			aux1 = aux1.getNext();
 		}
 		while(aux2=!null){
 			DNode<T> node = new Dnode<T>();
 			node.setValue(aux2.getValue());
+			node.setPrevious(joined.getLast());
 			joined.addLast(node);
 			aux2 = aux2.getNext();
 		}
