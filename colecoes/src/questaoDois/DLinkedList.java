@@ -212,6 +212,7 @@ public class DLinkedList<T> {
 				aux.getNext.setPrevious(aux.getPrevious());
 				aux.setNext(null);
 				aux.setPrevious(null);
+				size--;
 			}
 			aux = aux.getNext();
 		}
