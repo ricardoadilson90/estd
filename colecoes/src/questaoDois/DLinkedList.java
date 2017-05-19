@@ -3,6 +3,7 @@ package questaoDois;
 import org.junit.Assert;
 import org.junit.Test;
 
+
 public class DLinkedList<T> {
 
 	private DNode<T> first;
@@ -122,10 +123,10 @@ public class DLinkedList<T> {
 	}
 	//questão 5
 	public DLinkedList<T> copy(DLinkedList<T> list){
-		DLinkedList<String> copied = new DLinkedList<>();
-		DNode<String> aux = list.getFirst();
+		DLinkedList<T> copied = new DLinkedList<>();
+		DNode<T> aux = (list.getFirst());
 		while(aux!=null){
-			DNode<T> node = new Dnode<T>();
+			DNode<T> node = new DNode<T>();
 			node.setValue(aux.getValue());
 			copied.addLast(node);
 			aux = aux.getNext();
@@ -133,19 +134,19 @@ public class DLinkedList<T> {
 		return copied;
 	}
 	//Questão 7
-	public static SLinkedList<String> copyArrayToList(String[] array) {
-		SLinkedList<String> result = new SLinkedList<>();
+	public static DLinkedList<String> copyArrayToList(String[] array) {
+		DLinkedList<String> result = new DLinkedList<>();
 		for (String s : array) {
-			Node<String> node = new Node<String>(s);
-			result.add(node);
+			DNode<String> node = new DNode<String>(s);
+			result.addLast(node);
 		}
 		return result;
 	}
 	//Questão 8
-	public static String[] copyListToArray(SLinkedList<String> list) {
+	public static String[] copyListToArray(DLinkedList<String> list) {
 		int counter = 0;
 		String[] result = new String[(int) list.getSize()];
-		Node<String> aux = list.getFirst();
+		DNode<String> aux = list.getFirst();
 		while (aux != null) {
 			result[counter] = aux.getValue();
 			aux = aux.getNext();
@@ -156,19 +157,19 @@ public class DLinkedList<T> {
 
 	}
 	//Questão 9
-	public DLinkedList<T> join(DLinkedList<T> list1, DlinkedList<T> list2){
-		DLinkedList<String> joined = new DLinkedList<>();
-		DNode<String> aux1 = list1.getFirst();
-		DNode<String> aux2 = list2.getFirst();
+	public DLinkedList<T> join(DLinkedList<T> list1, DLinkedList<T> list2){
+		DLinkedList<T> joined = new DLinkedList<>();
+		DNode<T> aux1 = list1.getFirst();
+		DNode<T> aux2 = list2.getFirst();
 		while(aux1!=null){
-			DNode<T> node = new Dnode<T>();
+			DNode<T> node = new DNode<T>();
 			node.setValue(aux1.getValue());
 			node.setPrevious(joined.getLast());
 			joined.addLast(node);
 			aux1 = aux1.getNext();
 		}
-		while(aux2=!null){
-			DNode<T> node = new Dnode<T>();
+		while(aux2!=null){
+			DNode<T> node = new DNode<T>();
 			node.setValue(aux2.getValue());
 			node.setPrevious(joined.getLast());
 			joined.addLast(node);
@@ -181,10 +182,10 @@ public class DLinkedList<T> {
 	public boolean equals(Object obj){
 		boolean equals = true;
 		if (obj instanceof DLinkedList){
-			DLinkedList list = obj;
+			DLinkedList<T> list = (DLinkedList<T>) obj;
 			if(this.size == list.getSize()){
-				DNode aux1 = list.getFirst();
-				DNode aux2 = first;
+				DNode<T> aux1 = list.getFirst();
+				DNode<T> aux2 = first;
 				while(aux1!=null){
 					if(aux1.getValue().equals(aux2.getValue())){
 						aux1 = aux1.getNext();
@@ -208,8 +209,8 @@ public class DLinkedList<T> {
 		DNode<T> aux = this.getFirst();
 		while (aux != null) {
 			if(aux.getValue().equals(value)) {
-				aux.getPrevious.setNext(aux.getNext());
-				aux.getNext.setPrevious(aux.getPrevious());
+				aux.getPrevious().setNext(aux.getNext());
+				aux.getNext().setPrevious(aux.getPrevious());
 				aux.setNext(null);
 				aux.setPrevious(null);
 				size--;

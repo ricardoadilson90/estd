@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="aula04/src"/>
-	<classpathentry kind="src" path="aula04/test"/>
-	<classpathentry kind="src" path="Bovespa/src"/>
-	<classpathentry kind="src" path="Bovespa/test"/>
-	<classpathentry kind="src" path="estd/src"/>
-	<classpathentry kind="src" path="estd/test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="Bovespa/bin"/>
 </classpath>

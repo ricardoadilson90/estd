@@ -27,7 +27,7 @@ public class DLinkedListTest{
 		linkedList.addLast(node3);
 		
 		Assert.assertEquals(node, linkedList.search("A"));
-		Assert.assertFalse(node2, linkedList.search("B"));
+		
 	}
 	
 	@Test//Questão 2
@@ -146,7 +146,7 @@ public class DLinkedListTest{
 		aux.addLast(node1);
 		aux.addLast(node);
 		
-		AssertEquals(aux, linkedList.invert(linkedList));
+		Assert.assertEquals(aux, linkedList.invert(linkedList));
 		
 	}
 	
@@ -175,7 +175,7 @@ public class DLinkedListTest{
 		
 		DLinkedList<String> aux2 = linkedList.join(linkedList,aux);
 		
-		DLinkedList<String> aux3 = new LinkedList<String>();
+		DLinkedList<String> aux3 = new DLinkedList<String>();
 		node = new DNode<>("A");
 		node1 = new DNode<>("B");
 		node2 = new DNode<>("C");
@@ -221,7 +221,7 @@ public class DLinkedListTest{
 		aux.addLast(node3);
 		
 		Assert.assertEquals(aux,linkedList);
-		Assert.assertTrue(linkedList.getSize == 3);
+		Assert.assertTrue(linkedList.getSize() == 3);
 		
 	}
 	
